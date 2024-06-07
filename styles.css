@@ -409,7 +409,7 @@ footer{
 
     .b1{
         color: #FFCE00;
-        font-size: 30px;
+        font-size: 75px;
         font-family: Lexend Tera;
         display: inline;
         position: absolute;
@@ -421,7 +421,7 @@ footer{
 
     .b2{
         font-family: Cedarville Cursive; 
-        font-size: 20px;
+        font-size: 50px;
         color: black;
         position: relative;
         left: 20%;
@@ -459,6 +459,7 @@ footer{
     }
     .about{
         font-size: 10px;
+	max-width: 60%;
     }
 
     #wave2{
