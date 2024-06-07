@@ -1,0 +1,550 @@
+header{
+    background-color: #CEF1FD;
+    height:700px;
+    z-index: 3;
+}
+
+.b1{
+    color: #FFCE00;
+    font-size: 100px;
+    font-family: Lexend Tera;
+    display: inline;
+    position: absolute;
+    top:20%;
+    left:12%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.b2{
+    font-family: Cedarville Cursive; 
+    font-size: 80px;
+    position: relative; 
+    left: 30vw; 
+    color: black;
+    transform: translate(-50%, -50%);
+}
+
+.rectangle{
+    border:  6px solid white;
+    background-color: #CEF1FD;
+    height:30vw;
+    width: 60vw;
+    position: absolute;
+    left:25%;
+    top:15%;
+}
+
+.radio1{
+    height: 20vw;
+    width:45vw;
+    background-color: black;
+    position: absolute;
+    top:22%;
+    left:7%;
+    border-radius: 6vw;
+}
+
+.container{
+    animation: Anim 0.5s ease forwards infinite;
+}
+
+@keyframes Anim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.radio1 > .radio2{
+    height: 15vw;
+    width:35vw;
+    background-color: #484F57;
+    margin-left: 10%;
+    margin-top: 6%;
+    border-radius: 4vw;
+}
+
+.container{
+    display: inline-flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 7vw;
+    margin-left: 11%;
+}
+
+.speaker1, .speaker2{
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    background-color: black;
+    margin-top: 8%;
+}
+
+.player1{
+    background-image: url("./Untitled\ design\ 2.jpg");
+    height: 40%;
+    width: 50%;
+    position: absolute;
+    left:80%;
+}
+
+.player2{
+    object-fit: contain;
+    height: 80%;
+    width: 70%;
+    position: absolute;
+    top: -30%;
+    left: 120%;  
+    border-radius: 35%;
+}
+
+#wave1{
+    position: relative;
+    top:-15vw;
+    animation: MoveUpDown 1s linear infinite;
+}
+      
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1.5vw);
+    }
+  }
+
+
+.go{
+    color: #FFCE00;
+    font-size: 60px;
+    font-family: Lexend Tera;
+    padding-top: 5%;
+}
+
+.go span {
+    display: inline-block;
+    animation: wave-text 3s ease-in-out infinite; 
+}
+
+.go span:nth-child(1) {
+    animation-delay: 0s;
+}
+.go span:nth-child(2) {
+    animation-delay: 0.4s; 
+}
+.go span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.go span:nth-child(4) {
+    animation-delay: 1.2s;
+}
+.go span:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+@keyframes wave-text {
+    0% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-0.6em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.curated{
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-size: 30px;
+    font-family: Amatic SC;
+    width:70vw;
+    display: inline-block;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 2s ease;
+}
+
+.curated.animate {
+    transform: scale(1);
+}
+
+#wave2{
+    position: relative;
+    top:-21vw;
+    animation: MoveUpDown1 1s linear infinite;
+}
+
+@keyframes MoveUpDown1 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(1.5vw);
+    }
+}
+
+.recs{
+    color: #FFCE00;
+    font-size: 60px;
+    font-family: Lexend Tera;
+    text-align: center;
+}
+
+.brecs > .left{
+    font-family: Amatic SC;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap:100px;
+    position: relative;
+    left: -2%;
+}
+
+.brecs > .right{
+    font-family: Amatic SC;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:100px;
+}
+
+h3{
+    max-width: 25%;
+    background-color: #CEF1FD;
+    height: 20vw;
+    width:20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.name{
+    font-family: Cedarville Cursive; 
+    font-size: 40px;
+}
+
+.about{
+    font-size: 30px; 
+    max-width: 20%;
+}
+
+.sun{
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #FFCE00;
+}
+
+.b1,.b2{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+        0% {
+            animation-timing-function: ease-in;
+            opacity: 0;
+            transform: translateY(-250px);
+        }
+    
+        38% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        55% {
+            animation-timing-function: ease-in;
+            transform: translateY(-65px);
+        }
+    
+        72% {
+            animation-timing-function: ease-out;
+            transform: translateY(0);
+        }
+    
+        81% {
+            animation-timing-function: ease-in;
+            transform: translateY(-28px);
+        }
+    
+        90% {
+            animation-timing-function: ease-out;
+            transform: translateY(0);
+        }
+    
+        95% {
+            animation-timing-function: ease-in;
+            transform: translateY(-8px);
+        }
+    
+        100% {
+            animation-timing-function: ease-out;
+            transform: translateY(0);
+        }
+    }
+
+.brecs li {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.brecs li.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brecs li.visible {
+    animation: fadeInUp 1s ease-out;
+}
+
+#path {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    background: #000;
+    z-index: 999;
+}
+
+.wave{
+    position: relative;
+    top: -22vw;
+    width: 100%;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+
+}
+
+@keyframes swell {
+    0%, 100% {
+      transform: translate(0, 50px);
+    }
+    50% {
+      transform: translate(0, 5px);
+    }
+}
+
+h3 .name {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+h3 .name.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pointer {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: relative;
+    left: 50%; 
+    transition: top 0.2s ease-in-out; /* Smooth animation */
+    border-radius: 50%; /* Make it round */
+}
+
+footer{
+    position: relative; 
+    top:20vw; 
+    background-color: #114F6D; 
+    height: 200px;
+}
+
+@media (min-width:1200px) {
+    #pointer {
+        position: fixed;
+        top: 300px;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        background: #114F6D;
+        border-radius: 50%;
+        transition: transform 0.1s ease-out;
+        animation: MoveUpDown1 1s linear infinite;
+        z-index: 1;
+    }
+
+    .road{
+        border-right:4px dotted #000;
+        height: 3200px;
+        position: absolute;
+        top: 1900px;
+        left: 50.6%;
+    }
+}
+
+@media(min-width:319px) and  (max-width:480px){
+
+    header{
+        background-color: #CEF1FD;
+        height:400px;
+    }
+
+    .b1{
+        color: #FFCE00;
+        font-size: 30px;
+        font-family: Lexend Tera;
+        display: inline;
+        position: absolute;
+        top:5%;
+        left:12%;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .b2{
+        font-family: Cedarville Cursive; 
+        font-size: 20px;
+        color: black;
+        position: relative;
+        left: 20%;
+        text-align: center;
+    }
+
+    .recs{
+        color: #FFCE00;
+        font-size: 30px;
+        font-family: Lexend Tera;
+        text-align: center;
+        align-self: center;
+        padding:0;
+    }
+
+    .brecs > .left{
+        font-family: Amatic SC;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap:100px;
+        position: relative;
+        left: -2%;
+    }
+    
+    .brecs > .right{
+        font-family: Amatic SC;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .name{
+        font-size: 20px;
+    }
+    .about{
+        font-size: 10px;
+    }
+
+    #wave2{
+        position: relative;
+        top:-27vw;
+        animation: MoveUpDown1 1s linear infinite;
+    }
+
+}
+
+@media(min-width:481px) and  (max-width:800px){
+    header{
+        background-color: #CEF1FD;
+        height:400px;
+    }
+
+    .b1{
+        color: #FFCE00;
+        font-size: 75px;
+        font-family: Lexend Tera;
+        display: inline;
+        position: absolute;
+        top:5%;
+        left:12%;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .b2{
+        font-family: Cedarville Cursive; 
+        font-size: 50px;
+        color: black;
+        position: relative;
+        left:20%;
+        text-align: center;
+    }
+
+    .recs{
+        color: #FFCE00;
+        font-size: 60px;
+        font-family: Lexend Tera;
+        text-align: center;
+        align-self: center;
+        padding:0;
+    }
+
+    .brecs > .left{
+        font-family: Amatic SC;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        position: relative;
+        padding:20px;
+    }
+    
+    .brecs > .right{
+        font-family: Amatic SC;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .name{
+        font-size: 30px;
+    }
+    .about{
+        font-size: 20px;
+        max-width: 60%;
+    }
+
+    #curve{
+        width:0;
+        height: 0;
+    }
+
+    #follow{
+        height:0;
+        width: 0;
+    }
+
+    #wave2{
+        position: relative;
+        top:-25vw;
+        animation: MoveUpDown1 1s linear infinite;
+    }
+}

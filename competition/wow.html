@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Motion Path</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .container {
+        width: 100%;
+        height: 2000px; /* Height of the scrollable area */
+        position: relative;
+    }
+    .pointer {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        position: absolute;
+        left: 50%; /* Starting position */
+        transition: top 0.2s ease-in-out; /* Smooth animation */
+    }
+    /* Additional styles for the section and its content */
+    section {
+        margin-top: 50vh; /* Push section down by half of viewport height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 20px; /* Added padding for better spacing */
+    }
+    h2 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .name {
+        font-weight: bold;
+    }
+    .about {
+        margin-top: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Pointer div -->
+    <div class="pointer" id="pointer"></div>
+    <!-- Section content -->
+    <section>
+        <h2 class="recs">Top<br>Beaches</h2>
+        <ul class="brecs">
+            <li class="left">
+                <h3><span class="name">Whitehaven Beach,</span><br>Australia</h3>
+                <p class="about">Located on Whitsunday Island, Whitehaven Beach is famous for its stunning white silica sand and turquoise waters. It's a perfect spot for swimming, sunbathing, and enjoying the natural beauty of the Great Barrier Reef.</p>
+            </li>
+            <li class="right">
+                <p class="about">Grace Bay is known for its calm, clear waters and powdery white sand. This beach is ideal for snorkeling, diving, and enjoying luxury resorts that line its shore.</p>
+                <h3><span class="name">Grace Bay,</span><br>Turks and Caicos</h3>
+            </li>
+            <!-- Add more list items as needed -->
+        </ul>
+    </section>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var pointer = document.getElementById('pointer');
+        // Calculate the vertical position of the pointer along an arc based on scroll position
+        var arcHeight = 50; // Adjust the arc height as needed
+        var verticalPosition = (scrollPosition <= arcHeight) ? scrollPosition : arcHeight + Math.sin((scrollPosition - arcHeight) / 200) * 100;
+        var newPosition = verticalPosition + 'px';
+        pointer.style.top = newPosition;
+    });
+</script>
+
+</body>
+</html>
